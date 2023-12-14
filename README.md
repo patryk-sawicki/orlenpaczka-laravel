@@ -14,7 +14,17 @@ The recommended way to install is through [Composer](http://getcomposer.org).
 composer require patryk-sawicki/orlenpaczka-laravel
 ```
 
-## Usage
+## Frontend Usage
+
+### Map button
+
+Add map button to your blade file.
+
+```php
+<x-op::map-button/>
+```
+
+## Backend Usage
 
 Add to env:
 

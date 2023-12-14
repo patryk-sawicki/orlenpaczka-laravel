@@ -13,12 +13,14 @@ class OrlenPaczkaServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $path = realpath($raw = __DIR__ . '/../../');
+        if (!defined('ORLEN_PACZKA_PATH')) {
+            define('ORLEN_PACZKA_PATH', realpath(__DIR__ . '/../../'));
+        }
 
-//        include $path . '/routes/web.php';
+        include ORLEN_PACZKA_PATH . '/routes/web.php';
 
         if (!file_exists($this->app->databasePath() . '/config/op.php')) {
-            $this->publishes([$path . '/config/op.php' => config_path('op.php')], 'config');
+            $this->publishes([ORLEN_PACZKA_PATH . '/config/op.php' => config_path('op.php')], 'config');
         }
     }
 
@@ -29,7 +31,11 @@ class OrlenPaczkaServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $path = realpath($raw = __DIR__ . '/../../');
-        $this->mergeConfigFrom($path . '/config/op.php', 'op');
+        if (!defined('ORLEN_PACZKA_PATH')) {
+            define('ORLEN_PACZKA_PATH', realpath(__DIR__ . '/../../'));
+        }
+
+        $this->mergeConfigFrom(ORLEN_PACZKA_PATH . '/config/op.php', 'op');
+        $this->loadViewsFrom(ORLEN_PACZKA_PATH . '/resources/views/', 'op');
     }
 }

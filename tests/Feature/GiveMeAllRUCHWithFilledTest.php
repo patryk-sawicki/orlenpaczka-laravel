@@ -15,6 +15,5 @@ class GiveMeAllRUCHWithFilledTest extends TestCase
         $list = OrlenPaczka::giveMeAllRUCHWithFilled()->list();
 
         $this->assertTrue(!empty($list), 'Empty list');
-        dd($list);
     }
 }
