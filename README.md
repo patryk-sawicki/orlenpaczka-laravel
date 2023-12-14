@@ -24,6 +24,11 @@ Add map button to your blade file.
 <x-op::map-button/>
 ```
 
+Important:
+
+1. You must add `@stack('after-css')` before `</head>` tag.
+2. You must add `@stack('after-scripts')` before `</body>` tag.
+
 ## Backend Usage
 
 Add to env:
