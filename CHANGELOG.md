@@ -1,3 +1,6 @@
+* ### 0.1.3
+* map-button – Changes in styles.
+
 * ### 0.1.2
 * map-button – Added trigger on input change.
 
