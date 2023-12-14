@@ -28,6 +28,7 @@ Important:
 
 1. You must add `@stack('after-css')` before `</head>` tag.
 2. You must add `@stack('after-scripts')` before `</body>` tag.
+3. Selected point will be saved in `#orlenPointId` input.
 
 ## Backend Usage
 

@@ -137,6 +137,8 @@
                     //set hidden input value
                     orlenPointId.value = point.id
                     orlenModal.classList.remove('open')
+                    //run input change event
+                    orlenPointId.dispatchEvent(new Event('change'))
                 })
                 popupContent.append(popupButton)
 
