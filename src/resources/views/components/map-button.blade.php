@@ -58,6 +58,7 @@
 @push('after-scripts')
     <script>
         let map;
+        let clusterGroup;
         const mapInit = document.querySelector('#orlenMapPop');
         const orlenModal = document.querySelector('.orlenModal');
         const closeOrlenModalBtn = document.querySelector('.orlenModal__close-btn');
@@ -91,7 +92,9 @@
 
             if (map) return
 
-            map = L.map("map").setView([lat || 53.13333, lang || 23.16433], 13);
+            map = L.map("map", {
+                preferCanvas: true
+            }).setView([lat || 53.13333, lang || 23.16433], 13);
 
             const iconUrl = {!! json_encode(route('op.img', ['marker', 'png'])) !!};
 
@@ -108,18 +111,16 @@
             const points = {!! json_encode($data, JSON_HEX_TAG) !!};
 
             clusterGroup = L.markerClusterGroup({
-                maxClusterRadius: 50
+                maxClusterRadius: 80
             });
 
             points.forEach(point => {
                 let marker = L.marker([point.lat, point.lang], {
                     icon: orlenIcon
-                }).addTo(map)
+                })
 
                 //add marker to markes map
-
                 markersMap.set(point.id, marker)
-
 
                 const popupContent = document.createElement('div')
                 // set popup HTML
