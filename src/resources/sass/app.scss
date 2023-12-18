@@ -20,6 +20,7 @@ h1 {
     text-transform: uppercase;
     margin: 1rem 0;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .orlenModal {
@@ -80,6 +81,7 @@ h1 {
         width: 100%;
         padding: 0.5rem;
         max-width: 100%;
+        color: #000000;
     }
 
     .pointDropdown {
@@ -94,7 +96,7 @@ h1 {
         gap: 0.5rem;
         border: 1px solid gray;
         padding: 0.5rem;
-        overflow: scroll;
+        overflow: auto;
 
         &.open {
             display: flex;
@@ -105,6 +107,7 @@ h1 {
             background-color: #fff;
             border: none;
             text-align: left;
+            color: #000000;
             cursor: pointer;
 
             &.open {
