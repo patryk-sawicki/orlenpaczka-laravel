@@ -1,3 +1,6 @@
+* ### 0.1.4
+* map-button – Performance improvement.
+
 * ### 0.1.3
 * map-button – Changes in styles.
 
