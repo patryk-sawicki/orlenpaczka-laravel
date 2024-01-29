@@ -49,6 +49,11 @@ h1 {
         background-color: #fff;
         padding: 2rem;
         border-radius: 8px;
+
+        @media screen and (max-width: 768px) {
+            width: 95vw;
+
+        }
     }
 
     &__close-btn {
@@ -81,7 +86,7 @@ h1 {
         width: 100%;
         padding: 0.5rem;
         max-width: 100%;
-        color: #000000;
+        color: gray;
     }
 
     .pointDropdown {
@@ -112,6 +117,11 @@ h1 {
 
             &.open {
                 display: initial;
+                color: gray;
+
+                &:hover {
+                    color: #000;
+                }
             }
         }
     }
