@@ -117,28 +117,7 @@ Request:
 Result:
 
 ```php
-[
-    [
-        'DestinationCode' => 'WS-100001-27-26',
-        'StreetName' => 'ANNOPOL 17 TEST',
-        'City' => 'Warszawa',
-        'District' => 'Warszawa',
-        'Latitude' => '52.311519',
-        'Longitude' => '21.013830',
-        'Province' => 'Mazowieckie',
-        'CashOnDelivery' => 'true',
-        'OpeningHours' => 'Pn-Pt:00:00-24:00, So:00:00-24:00, Nd:00:00-24:00',
-        'Location' => 'Punkt testowy',
-        'PSD' => '100001',
-        'PointType' => 'PSD',
-        'Filled' => 'false',
-        'Suggestions' => [],
-        'Available' => 'true',
-        'ZipCode' => '03-236',
-        'ZipCode' => '03-236',
-    ],
-    ...
-]
+// return pdf
 ```
 
 ### Labels panel
