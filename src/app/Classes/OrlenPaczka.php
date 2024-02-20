@@ -8,4 +8,9 @@ class OrlenPaczka
     {
         return new GiveMeAllRUCHWithFilled();
     }
+
+    public static function generateLabelBusinessPack(): GenerateLabelBusinessPack
+    {
+        return new GenerateLabelBusinessPack();
+    }
 }

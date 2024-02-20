@@ -24,7 +24,7 @@ class Api
      * @param array $data
      * @return array
      * */
-    protected function postData(string $endpoint, array $data = []): array
+    protected function postData(string $endpoint, array $data = [], string $resultType = null): array
     {
         $data = $this->makeSoapData(endpoint: $endpoint, data: $this->addAuthData($data));
 
@@ -43,7 +43,8 @@ class Api
 
         $soap = simplexml_load_string($content);
         $response = $soap->children('http://www.w3.org/2003/05/soap-envelope')->Body->children(
-        )->{$endpoint . 'Response'}->{$endpoint . 'Result'}->Data;
+        )->{$endpoint . 'Response'};
+        $response = is_null($resultType) ? $response->{$endpoint . 'Result'}->Data : $response->{$resultType};
 
         return json_decode(json_encode($response), true);
     }
