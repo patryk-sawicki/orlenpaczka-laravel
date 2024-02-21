@@ -1,3 +1,7 @@
+* ### 0.2.1
+* GenerateLabelBusinessPack – Removed cache.
+* GenerateLabelBusinessPack – Additional validation.
+
 * ### 0.2.0
 * API - Generate label business pack
 

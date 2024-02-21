@@ -2,8 +2,6 @@
 
 namespace PatrykSawicki\OrlenPaczkaApi\app\Classes;
 
-use Illuminate\Support\Facades\Cache;
-
 class GenerateLabelBusinessPack extends Api
 {
     /**
@@ -13,10 +11,12 @@ class GenerateLabelBusinessPack extends Api
      */
     public function pdf(array $data)
     {
-        $cacheName = 'op_' . strtolower(self::class);
+        $label = $this->postData('GenerateLabelBusinessPack', $data, 'LabelData');
 
-        return Cache::remember($cacheName, config('op.cache_time'), function () use ($data) {
-            return base64_decode($this->postData('GenerateLabelBusinessPack', $data, 'LabelData')[0]);
-        });
+        if (!is_array($label) || empty($label)) {
+            abort(500, 'Error while generating label');
+        }
+
+        return base64_decode($label[0]);
     }
 }
