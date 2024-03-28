@@ -1,3 +1,6 @@
+* ### 0.2.2
+* Update composer.json to Laravel 11.
+
 * ### 0.2.1
 * GenerateLabelBusinessPack – Removed cache.
 * GenerateLabelBusinessPack – Additional validation.
