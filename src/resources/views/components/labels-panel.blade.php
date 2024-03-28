@@ -60,6 +60,13 @@
                     <input type="tel" name="op[PhoneNumber]" id="op-phone_number" placeholder="Telefon"
                            value="{{ $phoneNumber ?? '' }}" class="form-control js-required" required maxlength="9">
                 </div>
+
+                {{--E-mail--}}
+                <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 mb-10-px">
+                    <label for="op-email">E-mail</label>
+                    <input type="email" name="op[EMail]" id="op-email" placeholder="E-mail"
+                           value="{{ $email ?? '' }}" class="form-control js-required" maxlength="60">
+                </div>
             </div>
 
             <h2>Nadawca</h2>

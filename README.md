@@ -99,6 +99,7 @@ Request:
         'FirstName' => 'Jan',
         'LastName' => 'Kowalski',
         'PhoneNumber' => '123456789',
+        'EMail' => 'aaa@bbb.pl',
         'SenderEMail' => 'aaa@bbb.pl',
         'SenderFirstName' => 'Jan',
         'SenderLastName' => 'Kowalski',
@@ -130,6 +131,7 @@ Add a panel for generating labels.
     :firstName=""
     :lastName=""
     :phoneNumber=""
+    :email=""
     :senderEMail=""
     :senderFirstName=""
     :senderLastName=""

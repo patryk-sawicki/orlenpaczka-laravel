@@ -1,3 +1,6 @@
+* ### 0.2.3
+* GenerateLabelBusinessPack – Added receiver email field.
+
 * ### 0.2.2
 * Update composer.json to Laravel 11.
 
