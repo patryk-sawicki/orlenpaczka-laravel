@@ -1,3 +1,6 @@
+* ### 0.2.4
+* Fix: Ensure DestinationCode is set before processing map points
+
 * ### 0.2.3
 * GenerateLabelBusinessPack – Added receiver email field.
 

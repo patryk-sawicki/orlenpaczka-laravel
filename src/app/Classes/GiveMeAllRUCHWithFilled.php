@@ -39,6 +39,10 @@ class GiveMeAllRUCHWithFilled extends Api
                     continue;
                 }
 
+                if (!isset($mapPoint['DestinationCode'])) {
+                    continue;
+                }
+
                 $data[] = [
                     'id' => $mapPoint['DestinationCode'],
                     'lat' => $mapPoint['Latitude'],
